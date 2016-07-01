@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run markup && webpack -c --config webpack.config.js",
+    "build": "npm run markup && webpack -c --config webpack.config.prod.js",
     "markup": "cp src/index.html build/ && cp src/index.html dist/",
-    "serve": "npm run markup && webpack-dev-server --content-base dist/ -w -c --hot --inline --config webpack.config.js"
+    "serve": "npm run markup && webpack-dev-server --content-base dist/ -w -c --hot --inline --config webpack.config.dev.js"
   },
   "author": "",
   "license": "ISC",
