@@ -1,3 +1,5 @@
 .temp
 typings
 node_modules
+dist
+build

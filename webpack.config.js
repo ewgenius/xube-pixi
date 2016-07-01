@@ -1,8 +1,9 @@
 const webpack = require('webpack')
+const path = require('path')
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', './.temp.js/xube.js'],
+    app: ['babel-polyfill', './.temp/js/xube.js'],
     vendor: [
       'pixi.js'
     ]
@@ -19,6 +20,13 @@ module.exports = {
       query: {
         presets: ['es2015', 'stage-0']
       }
+    }, {
+      test: /\.json$/,
+      loader: 'json-loader'
+    }],
+    postLoaders: [{
+      include: path.resolve(__dirname, 'node_modules/pixi.js'),
+      loader: 'transform?brfs'
     }]
   },
   plugins: [
