@@ -6,15 +6,8 @@ import {
   Sprite
 } from 'pixi.js'
 
-const image: string = require<string>('../../assets/texture1.jpg')
-console.log(image)
+const texture1: string = require<string>('../../assets/texture1.jpg')
 
-function createSprite(path): Sprite {
-  const image: string = require<string>(path)
-  const texture = Texture.fromImage(image)
-  const sprite = new Sprite(texture)
-  return sprite
-}
 
 export class Game {
   private renderer = autoDetectRenderer(800, 600, { backgroundColor: 0x000000 })
@@ -23,9 +16,12 @@ export class Game {
   run() {
     document.body.appendChild(this.renderer.view)
 
-    //const sprite = createSprite('../../assets/texture1.jpg')
+    const texture = Texture.fromImage(texture1)
+    const sprite = new Sprite(texture)
+    sprite.anchor.set(texture.width, texture.height)
+    sprite.position.set(20, 40)
 
-    //this.stage.addChild(sprite)
+    this.stage.addChild(sprite)
 
     this.loop()
   }
