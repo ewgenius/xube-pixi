@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', './.temp/js/xube.js'],
+    app: ['babel-polyfill', './.temp/xube.js'],
     vendor: [
       'pixi.js'
     ]
@@ -23,6 +23,9 @@ module.exports = {
     }, {
       test: /\.json$/,
       loader: 'json-loader'
+    }, {
+      test: /\.(png|jpg|gif)$/,
+      loader: 'file-loader'
     }],
     postLoaders: [{
       include: path.resolve(__dirname, 'node_modules/pixi.js'),

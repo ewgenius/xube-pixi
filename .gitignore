@@ -1,5 +1,6 @@
 .temp
 typings
+!typings/utils/
 node_modules
 dist
 build
