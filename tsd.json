@@ -1,0 +1,12 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "pixi.js/pixi.js.d.ts": {
+      "commit": "b2d754f53fe0b0418625c5ee6023a18c5c46cb4d"
+    }
+  }
+}
