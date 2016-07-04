@@ -2,6 +2,7 @@
   "name": "xube-pixi",
   "dependencies": {},
   "globalDependencies": {
-    "pixi.js": "registry:dt/pixi.js#3.0.9+20160613144105"
+    "pixi.js": "registry:dt/pixi.js#3.0.9+20160613144105",
+    "socket.io-client": "registry:dt/socket.io-client#1.4.4+20160317120654"
   }
 }

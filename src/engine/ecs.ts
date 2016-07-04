@@ -9,7 +9,6 @@ export class System {
   }
 
   public onEntityAdded(entity) {
-
   }
 }
 
