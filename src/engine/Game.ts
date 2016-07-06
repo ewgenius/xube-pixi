@@ -8,23 +8,19 @@ import {
   EventEmitter,
   Point
 } from 'pixi.js'
-import {
-  System,
-  Component,
-  Entity,
-  World
-} from './ecs'
 
 const texture1: string = require<string>('../../assets/texture1.jpg')
-
 
 export class Game {
   private renderer = autoDetectRenderer(800, 600, { backgroundColor: 0x000000 })
   private stage = new Container()
-  private world = new World()
 
   run() {
     document.body.appendChild(this.renderer.view)
+
+    document.addEventListener('keydown', e => this.onKeyDown(e))
+    document.addEventListener('keypress', e => this.onKeyPress(e))
+    document.addEventListener('keyup', e => this.onKeyUp(e))
 
     const texture = Texture.fromImage(texture1)
     const sprite = new Sprite(texture)
@@ -32,6 +28,18 @@ export class Game {
     this.stage.addChild(sprite)
 
     this.loop()
+  }
+
+  onKeyDown(key) {
+    console.log(key)
+  }
+
+  onKeyUp(key) {
+    console.log(key)
+  }
+
+  onKeyPress(key) {
+    console.log(key)
   }
 
   private loop() {
